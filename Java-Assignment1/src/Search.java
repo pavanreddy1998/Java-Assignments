@@ -21,11 +21,11 @@ public class Search {
 
     }
 
-    void printFiles(File[] files,String reg){
+    void printFiles(File[] files,String regularExpression){
         for (File file : files) {
           //checking if it is a file
             if (file.isFile()) {
-                Pattern pattern = Pattern.compile(reg);        //converting the string into pattern
+                Pattern pattern = Pattern.compile(regularExpression);        //converting the string into pattern
                 Matcher m = pattern.matcher(file.getName());
 
                  //checking if file name matches with pattern
@@ -36,7 +36,7 @@ public class Search {
              //if it is a directory, call the printFiles method with new directory
             else if(file.isDirectory()){
                 File[] subfiles = new File(file.getPath()).listFiles();
-                printFiles(subfiles,reg);
+                printFiles(subfiles,regularExpression);
             }
         }
     }
