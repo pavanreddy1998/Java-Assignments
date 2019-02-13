@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Kyc {
+public class KycRangeFinder {
     /**
      * finds the the allowable date range to complete kyc.
      * @param signUpDateString
